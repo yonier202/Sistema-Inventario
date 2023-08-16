@@ -1,4 +1,4 @@
 <?php
-    session_name("IV");
+    session_name("Inventario");
     session_start();
 ?>
