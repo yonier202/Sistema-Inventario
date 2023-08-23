@@ -20,9 +20,9 @@
         </a>
 
         <div class="navbar-dropdown">
-          <a class="navbar-item">Nuevo</a>
-          <a class="navbar-item">Listar</a>
-          <a class="navbar-item">Buscar</a>
+          <a class="navbar-item" href="index.php?vista=user_new" >Nuevo</a>
+          <a class="navbar-item" href="index.php?vista=user_list" >Listar</a>
+          <a class="navbar-item"href="index.php?vista=user_search" >Buscar</a>
 
         </div>
       </div>

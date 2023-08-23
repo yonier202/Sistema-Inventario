@@ -17,7 +17,7 @@
     if (is_file("./vistas/".$_GET['vista'].".php") && $_GET['vista']!="login" && $_GET['vista']!="404") {
         include "inc/nav.php";
         include "./vistas/".$_GET['vista'].".php";
-        include "inc/script.php";
+        include "./inc/script.php";
     }else{
         if ($_GET['vista']=="login") {
             include "./vistas/login.php";
