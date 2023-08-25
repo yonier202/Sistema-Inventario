@@ -22,4 +22,11 @@
 		</p>
 	</form>
 
+	<?php
+		if (isset($_REQUEST['login_usuario']) && isset($_REQUEST['login_clave'])) {
+			include_once('./php/main.php');
+			include_once('./php/iniciar_sesion.php');
+		}
+	?>
+
 </div>
