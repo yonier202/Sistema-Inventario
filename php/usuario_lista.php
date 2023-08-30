@@ -72,6 +72,7 @@ if ($total>=1 && $pagina<=$Npaginas) {
     }
     $pag_final=$contador-1;
 }else{
+    //estamos en una pagina que no existe, pero hay registros
     if ($total>=1) {
         $tabla.=
         '<tr class="has-text-centered" >
@@ -91,5 +92,18 @@ if ($total>=1 && $pagina<=$Npaginas) {
     }
 }
 $tabla.='</tbody></table></div>';
-echo $tabla;                
+
+if ($total>=1 && $pagina<=$Npaginas) {
+    $tabla.='<p class="has-text-right">Mostrando usuarios <strong>'.$pag_inicio.'</strong> al <strong>'.$pag_final.'</strong> de un <strong>total de '.$total.'</strong></p>';
+    
+}
+
+
+$conexion=null;
+echo $tabla;
+
+if ($total>=1 && $pagina<=$Npaginas) {
+    echo paginador_tablas($pagina,$Npaginas,$url,7);
+     
+}
 ?>

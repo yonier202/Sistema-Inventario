@@ -7,10 +7,10 @@
 
 <?php
     require_once('./php/main.php');
-    if (!isset($_GET['page'])) { 
+    if (!isset($_REQUEST['page'])) { 
         $pagina=1;
     }else{
-        $pagina=(int) $_GET['page'];
+        $pagina=(int) $_REQUEST['page'];
         if ($pagina<=1) {
             $pagina=1;
         }

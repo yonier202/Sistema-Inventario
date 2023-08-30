@@ -94,7 +94,10 @@ function paginador_tablas($pagina,$N_paginas,$url,$botones){
         $tabla.=
         '<a class="pagination-previous" href="'.$url.($pagina-1).'">Anterior</a>
         <ul class="pagination-list">
-            <li><a class="pagination-link" href="'.$url.'1">1</a></li>'; 
+            <li><a class="pagination-link" href="'.$url.'1">1</a></li>
+            <li><span class="pagination-ellipsis">&hellip;</span></li>
+            ';
+
     }
 
     $ci=0;
@@ -120,8 +123,6 @@ function paginador_tablas($pagina,$N_paginas,$url,$botones){
         $tabla.=
         '</ul>
             <a class="pagination-next is-disabled" disabled >Siguiente</a>
-            <li><span class="pagination-ellipsis">&hellip;</span></li>
-            <li><a class="pagination-link" href="'.$url.$N_paginas.'">'.$N_paginas.'</a></li>
         ';
     }
 
