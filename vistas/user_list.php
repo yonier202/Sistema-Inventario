@@ -7,10 +7,10 @@
 
 <?php
     require_once('./php/main.php');
-    if (!isset($_REQUEST['page'])) { 
+    if (!isset($_GET['page'])) { 
         $pagina=1;
     }else{
-        $pagina=(int) $_REQUEST['page'];
+        $pagina=(int) $_GET['page'];
         if ($pagina<=1) {
             $pagina=1;
         }
@@ -24,7 +24,7 @@
     require_once('./php/usuario_lista.php');
 ?>
 
-    <div class="table-container">
+    <!-- <div class="table-container">
         <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
             <thead>
                 <tr class="has-text-centered">
@@ -86,4 +86,4 @@
         <a class="pagination-next" href="#">Siguiente</a>
     </nav>
 
-</div>
+</div> -->
