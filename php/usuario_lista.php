@@ -4,19 +4,18 @@
 $inicio=($pagina>0) ? (($registros*$pagina)-$registros) : 0;
 $tabla="";
 //busqueda difernte de vacio
-if (isset($busqueda) && $busqueda!=""){
-    $consulta_datos="SELECT * FROM usuario WHERE ((`id`!= '".$_SESSION['id']."')
-    AND (`nombre` LIKE "%$busqueda%" OR `apellido` LIKE "%$busqueda%" OR `usuario` LIKE "%$busqueda%"
-    OR `email` LIKE "%$busqueda%" )) order by nombre ASC limit $inicio,$registros";
+if(isset($busqueda) && $busqueda!=""){
 
-    $consulta_total="SELECT COUNT(id) FROM usuario WHERE (`id`!= '".$_SESSION['id']."')
-    AND (`nombre` LIKE "%$busqueda%" OR `apellido` LIKE "%$busqueda%" OR `usuario` LIKE "%$busqueda%"
-    OR `email` LIKE "%$busqueda%" ))";
+    $consulta_datos="SELECT * FROM usuario WHERE ((id!='".$_SESSION['id']."') AND (nombre LIKE '%$busqueda%' OR apellido LIKE '%$busqueda%' OR usuario LIKE '%$busqueda%' OR email LIKE '%$busqueda%')) ORDER BY nombre ASC LIMIT $inicio,$registros";
+
+    $consulta_total="SELECT COUNT(id) FROM usuario WHERE ((id!='".$_SESSION['id']."') AND (nombre LIKE '%$busqueda%' OR apellido LIKE '%$busqueda%' OR usuario LIKE '%$busqueda%' OR email LIKE '%$busqueda%'))";
 
 }else{
-    $consulta_datos="SELECT * FROM usuario WHERE `id`!= '".$_SESSION['id']."' order by nombre ASC limit $inicio,$registros";
 
-    $consulta_total="SELECT COUNT(id) FROM usuario WHERE id != '".$_SESSION['id']."'";
+    $consulta_datos="SELECT * FROM usuario WHERE id!='".$_SESSION['id']."' ORDER BY nombre ASC LIMIT $inicio,$registros";
+
+    $consulta_total="SELECT COUNT(id) FROM usuario WHERE id!='".$_SESSION['id']."'";
+    
 }
 $conexion=conexion();
 
