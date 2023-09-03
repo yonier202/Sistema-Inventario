@@ -8,12 +8,12 @@
     require_once('./php/main.php');
     //si se envia el formulario se ejecuta esto:
     if (isset($_POST['modulo_buscador'])) {
-        require_once('./php/buscador.php');
+        include_once('./php/buscador.php');
     }
 
     
     //si la variable no viene defina o esta vacia
-    if (!isset($_SESSION['busqueda_user']) || empty($_SESSION['busqueda_user']))  {
+    if (!isset($_SESSION['busqueda_usuario']) || empty($_SESSION['busqueda_usuario']))  {
     ?>
 
     <div class="columns">
@@ -42,7 +42,7 @@
             <form class="has-text-centered mt-6 mb-6" action="" method="POST" autocomplete="off" >
                 <input type="hidden" name="modulo_buscador" value="usuario"> 
                 <input type="hidden" name="eliminar_buscador" value="usuario">
-                <p>Estas buscando <strong><?php echo $_SESSION['busqueda_user']; ?></strong></p>
+                <p>Estas buscando <strong><?php echo $_SESSION['busqueda_usuario']; ?></strong></p>
                 <br>
                 <button type="submit" class="button is-danger is-rounded">Eliminar busqueda</button>
             </form>
@@ -123,7 +123,7 @@ if (!isset($_REQUEST['page'])) {
 $pagina=limpiar_cadena($pagina);
 $url="index.php?vista=user_search&page=";
 $registros=15;
-$busqueda=$_SESSION['busqueda_user'];
+$busqueda=$_SESSION['busqueda_usuario'];
 
 require_once('./php/usuario_lista.php');
 
