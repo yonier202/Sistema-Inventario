@@ -47,7 +47,11 @@ if (in_array($modulo_buscador,$modulos)) {
     }
     //eliminar la busuqeda
     if (isset($_REQUEST['eliminar_buscador'])) {
-        # code...
+        //eliminamos la variable que tiene el valor de la busqueda
+        unset($_SESSION[$modulo_buscador]);
+        //redirecionamos nuevamente al buscador
+        header("Location: index.php?vista=$modulos_url",true,303);
+        exit();
     }
 }else{
     echo '
