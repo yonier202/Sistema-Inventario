@@ -65,6 +65,7 @@ if ($total>=1 && $pagina<=$Npaginas) {
                         <a href="'.$url.$pagina.'&user_id_del='.$registro['id'].'" class="button is-danger is-rounded is-small">Eliminar</a>
                     </td>
                 </tr>
+                
         ';
 
         $contador++;
