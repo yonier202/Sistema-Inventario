@@ -34,9 +34,9 @@
 
 
 
-	<form action="" method="POST" class="FormularioAjax" autocomplete="off" >
+	<form action="./php/usuario_actualizar.php" method="POST" class="FormularioAjax" autocomplete="off" >
 
-		<input type="hidden" name="usuario_id" value="<?php echo $datos['id'] ?>" required >
+		<input type="hidden" name="id" value="<?php echo $datos['id'] ?>" required >
 		
 		<div class="columns">
 		  	<div class="column">
