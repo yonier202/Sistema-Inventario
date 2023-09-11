@@ -215,7 +215,7 @@
         ":email" => $email,
         ":id" => $id
     ];
-    //ejecutamos psando los marcadores de las varibles de los datos a guardar
+    //ejecutamos pasando los marcadores de las varibles de los datos a guardar
     $actializar_datos->execute($marcadores);
 
     //verificar si se registro el dato
