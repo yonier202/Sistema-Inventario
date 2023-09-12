@@ -47,7 +47,7 @@ if ($check_categoria->rowCount()>0) {
     echo '
     <div class="notification is-danger is-light">
         <strong>¡Ocurrio un error inesperado!</strong><br>
-        Categoria ingresada ya esta registrado
+        Categoria ingresada ya esta registrada
     </div>';
     exit();
 }
