@@ -20,13 +20,12 @@
 		<p class="has-text-centered mb-4 mt-3">
 			<button type="submit" class="button is-info is-rounded">Iniciar sesion</button>
 		</p>
-	</form>
-
 	<?php
 		if (isset($_REQUEST['login_usuario']) && isset($_REQUEST['login_clave'])) {
 			include_once('./php/main.php');
 			include_once('./php/iniciar_sesion.php');
 		}
 	?>
+	</form>
 
 </div>
