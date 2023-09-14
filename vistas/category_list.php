@@ -5,6 +5,8 @@
 
 <div class="container pb-6 pt-6">
 <?php
+
+    include('./inc/btn_back.php');
     require_once('./php/main.php');
 
     //pagina

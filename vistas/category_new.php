@@ -4,6 +4,9 @@
 </div>
 
 <div class="container pb-6 pt-6">
+<?php
+    include('./inc/btn_back.php');
+?>
 
 	<div class="form-rest mb-6 mt-6"></div>
 

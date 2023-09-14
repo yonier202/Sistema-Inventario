@@ -56,10 +56,11 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
-          <a href="index.php?vista=user_update&user_id_up=<?php echo $_SESSION['id'] ?>" class="button is-primary is-rounded">
+          <a href="index.php?vista=user_update&user_id_up=<?php echo $_SESSION['id'] ?>" class="button">
+          <i class="fa fa-user" aria-hidden="true"></i> <!-- Icono de una casa -->
             <span>Mi cuenta</span>
           </a>
-          <a href="index.php?vista=logout" class="button is-link is-rounded">
+          <a href="index.php?vista=logout" class="button is-danger">
             <span>salir</span>
           </a>
         </div>
