@@ -7,8 +7,7 @@ $tabla="";
 if(isset($busqueda) && $busqueda!=""){
 
     $consulta_datos="SELECT * FROM categoria WHERE nombre LIKE '%$busqueda%'
-     OR ubicacion LIKE '%$busqueda%')
-     ORDER BY nombre ASC LIMIT $inicio,$registros";
+     OR ubicacion LIKE '%$busqueda%' ORDER BY nombre ASC LIMIT $inicio,$registros";
 
     $consulta_total="SELECT COUNT(categoria_id) FROM categoria WHERE nombre LIKE '%$busqueda%' OR ubicacion LIKE '%$busqueda%'";
 

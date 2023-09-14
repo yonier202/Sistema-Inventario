@@ -2,7 +2,7 @@
 // trae valor=usuario por un input oculto
 $modulo_buscador=limpiar_cadena($_REQUEST['modulo_buscador']);
 
-$modulos=["usuario", "categorias", "producto"];
+$modulos=["usuario", "categoria", "producto"];
 
 //compruba si el valor $modulo_buscador esta en el array
 if (in_array($modulo_buscador,$modulos)) {
@@ -32,6 +32,7 @@ if (in_array($modulo_buscador,$modulos)) {
                 </div>';
             }
             else{
+                //valor a buscar
                 $_SESSION[$modulo_buscador]=$txt;
 
                 header("Location: index.php?vista=$modulos_url",true,303);
