@@ -10,13 +10,13 @@ if(isset($busqueda) && $busqueda!=""){
      OR ubicacion LIKE '%$busqueda%')
      ORDER BY nombre ASC LIMIT $inicio,$registros";
 
-    $consulta_total="SELECT COUNT(id) FROM categoria WHERE nombre LIKE '%$busqueda%' OR ubicacion LIKE '%$busqueda%'";
+    $consulta_total="SELECT COUNT(categoria_id) FROM categoria WHERE nombre LIKE '%$busqueda%' OR ubicacion LIKE '%$busqueda%'";
 
 }else{
 
     $consulta_datos="SELECT * FROM categoria ORDER BY nombre ASC LIMIT $inicio,$registros";
 
-    $consulta_total="SELECT COUNT(id) FROM categoria";
+    $consulta_total="SELECT COUNT(categoria_id) FROM categoria";
     
 }
 $conexion=conexion();
@@ -38,12 +38,13 @@ $tabla.='
     <div class="table-container">
     <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
         <thead>
-            <tr class="has-text-centered">
-                <th>#</th>
-                <th>Nombre</th>
-                <th>Ubicacion</th>
-                <th colspan="2">Opciones</th>
-            </tr>
+        <tr class="has-text-centered">
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Ubicación</th>
+            <th>Productos</th>
+            <th colspan="2">Opciones</th>
+        </tr>
         </thead>
         <tbody>';
 
@@ -55,14 +56,17 @@ if ($total>=1 && $pagina<=$Npaginas) {
         <tr class="has-text-centered" >
 					<td>'.$contador.'</td>
                     <td>'.$registro['nombre'].'</td>
-                    <td>'.$registro['ubicacion'].'</td>
+                    <td>'. substr($registro['ubicacion'],0,25).'</td>
                     <td>
-                        <a href="index.php?vista=category_update&category_id_up='.$registro['id'].'" class="button is-success is-rounded is-small">Actualizar</a>
+                        <a href="index.php?vista=product_category&category_id='.$registro['categoria_id'].'" class="button is-link is-rounded is-small">Ver productos</a>
                     </td>
                     <td>
-                        <a href="'.$url.$pagina.'&category_id_del='.$registro['id'].'" class="button is-danger is-rounded is-small">Eliminar</a>
+                        <a href="index.php?vista=category_update&category_id_up='.$registro['categoria_id'].'" class="button is-success is-rounded is-small">Actualizar</a>
                     </td>
-                </tr>
+                    <td>
+                        <a href="'.$url.$pagina.'&category_id_del='.$registro['categoria_id'].'" class="button is-danger is-rounded is-small">Eliminar</a>
+                    </td>
+        </tr>
                 
         ';
 
@@ -74,7 +78,7 @@ if ($total>=1 && $pagina<=$Npaginas) {
     if ($total>=1) {
         $tabla.=
         '<tr class="has-text-centered" >
-            <td colspan="7">
+            <td colspan="6">
                 <a href="'.$url.'1" class="button is-link is-rounded is-small mt-4 mb-4">
                     Haga clic acá para recargar el listado
                 </a>
@@ -83,7 +87,7 @@ if ($total>=1 && $pagina<=$Npaginas) {
     }else{
         $tabla.=
         '<tr class="has-text-centered" >
-            <td colspan="7">
+            <td colspan="6">
                 No hay registros en el sistema
             </td>
         </tr>';
@@ -92,7 +96,7 @@ if ($total>=1 && $pagina<=$Npaginas) {
 $tabla.='</tbody></table></div>';
 
 if ($total>=1 && $pagina<=$Npaginas) {
-    $tabla.='<p class="has-text-right">Mostrando usuarios <strong>'.$pag_inicio.'</strong> al <strong>'.$pag_final.'</strong> de un <strong>total de '.$total.'</strong></p>';
+    $tabla.='<p class="has-text-right">Mostrando Categorias <strong>'.$pag_inicio.'</strong> al <strong>'.$pag_final.'</strong> de un <strong>total de '.$total.'</strong></p>';
     
 }
 
