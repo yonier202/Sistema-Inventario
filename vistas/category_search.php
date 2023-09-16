@@ -52,7 +52,7 @@
     </div>
 
     <?php
-    //eliminar usuarios
+    //eliminare categoria
         if (isset($_REQUEST['category_id_del'])) {
             require_once('./php/categoria_eliminar.php');
         }

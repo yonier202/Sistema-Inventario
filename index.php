@@ -4,7 +4,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 <?php
     include "inc/head.php";
 ?>  

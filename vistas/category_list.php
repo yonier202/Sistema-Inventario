@@ -8,6 +8,11 @@
 
     include('./inc/btn_back.php');
     require_once('./php/main.php');
+    
+    //eliminare categoria
+    if (isset($_REQUEST['category_id_del'])) {
+        require_once('./php/categoria_eliminar.php');
+    }
 
     //pagina
     if (!isset($_REQUEST['page'])) { 
