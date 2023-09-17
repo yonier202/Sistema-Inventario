@@ -37,7 +37,7 @@ if ($ubicacion !="") {
     }
 }
 
-//verificando categorias no repetisa
+//verificando categorias no repetida
 
 $check_categoria=conexion();
 //buscando cuantas categorias existen con el nombre ingresado
