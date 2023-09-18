@@ -1,6 +1,6 @@
 <div class="container is-fluid">
     <h1 class="title">Home</h1>
-    <h2 class="subtitle">¡Bienvenido <?php echo $_SESSION['name']." ".$_SESSION['apellido']; ?>!</h2>
+    <h2 class="subtitle">¡Bienvenido <?php echo $_SESSION['name']." ".$_SESSION['apellido']; ?>! <i class="fas fa-user-tie"></i></h2>
 </div>
 
 <!-- <nav class="pagination is-centered is-rounded" role="navigation" aria-label="pagination">

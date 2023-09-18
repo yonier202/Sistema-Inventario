@@ -36,13 +36,13 @@ $tabla.='
     <div class="table-container">
     <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
         <thead>
-            <tr class="has-text-centered">
-                <th>#</th>
-                <th>Nombres</th>
-                <th>Apellidos</th>
-                <th>Usuario</th>
-                <th>Email</th>
-                <th colspan="2">Opciones</th>
+            <tr class="has-text-centered is-centered">
+                <th class="has-text-centered is-centered">#</th>
+                <th class="has-text-centered is-centered">Nombres</th>
+                <th class="has-text-centered is-centered">Apellidos</th>
+                <th class="has-text-centered is-centered">Usuario</th>
+                <th class="has-text-centered is-centered">Email</th>
+                <th colspan="2" class="has-text-centered is-centered">Opciones</th>
             </tr>
         </thead>
         <tbody>';
@@ -52,7 +52,7 @@ if ($total>=1 && $pagina<=$Npaginas) {
     $pag_inicio=$inicio+1;
     foreach ($datos as $registro) {
         $tabla.='
-        <tr class="has-text-centered" >
+        <tr class="has-text-centered is-centered" >
 					<td>'.$contador.'</td>
                     <td>'.$registro['nombre'].'</td>
                     <td>'.$registro['apellido'].'</td>

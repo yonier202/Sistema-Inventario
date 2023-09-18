@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<script src="https://kit.fontawesome.com/917394b1b3.js" crossorigin="anonymous"></script>
 <?php
     include "inc/head.php";
 ?>  

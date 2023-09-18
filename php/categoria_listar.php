@@ -37,7 +37,7 @@ $tabla.='
     <div class="table-container">
     <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
         <thead>
-        <tr class="has-text-centered">
+        <tr class="has-text-centered is-centered">
             <th>#</th>
             <th>Nombre</th>
             <th>Ubicación</th>
