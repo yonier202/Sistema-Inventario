@@ -83,7 +83,7 @@
     if ($actializar_categoria->rowCount()==1) {
         echo '
         <div class="notification is-info is-light">
-            <strong>¡CATEGORIA ACTUALIZADO!</strong><br>
+            <strong>¡CATEGORIA ACTUALIZADA!</strong><br>
             La categoria se actualizo con exito
             
         </div>';
