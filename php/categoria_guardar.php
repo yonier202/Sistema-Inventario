@@ -76,6 +76,7 @@ $guardar_categoria=conexion();
             
         </div>';
     }else{
+
         echo '
         <div class="notification is-danger is-light">
             <strong>¡Ocurrio un error inesperado!</strong><br>
