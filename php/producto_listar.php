@@ -63,8 +63,8 @@ if ($total>=1 && $pagina<=$Npaginas) {
     <article class="media">
         <figure class="media-left">
             <p class="image is-64x64">';
-            if (is_file('../image/producto/'.$registro['foto'].'')) {
-                $tabla.= '<img src="../image/producto/'.$registro['foto'].'>';
+            if (is_file("./image/producto/".$registro['foto'])) {
+                $tabla.= '<img src="../image/producto/'.$registro['foto'].'">';
             }else{
                 $tabla.= '<img src="../image/logo.png">';
             }$tabla.='</p>
@@ -81,7 +81,7 @@ if ($total>=1 && $pagina<=$Npaginas) {
                 </p>
             </div>
             <div class="has-text-right">
-                <a href="#" class="button is-link is-rounded is-small">Imagen</a>
+                <a href="index.php?vista=product_img&product_id_up='.$registro['producto_id'].'" class="button is-link is-rounded is-small">Imagen</a>
                 <a href="index.php?vista=product_update&product_id_up='.$registro['producto_id'].'" class="button is-success is-rounded is-small">Actualizar</a>
                 <a href="'.$url.$pagina.'&product_id_del='.$registro['producto_id'].'" class="button is-danger is-rounded is-small">Eliminar</a>
             </div>
