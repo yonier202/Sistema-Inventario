@@ -1,1 +1,1 @@
-Imagen Producto
+Imagen Productos
