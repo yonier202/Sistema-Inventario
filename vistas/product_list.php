@@ -10,6 +10,11 @@ include('./inc/btn_back.php');
 require_once('./php/main.php');
 
 
+ //eliminar producto
+ if (isset($_REQUEST['product_id_del'])) {
+    require_once('./php/producto_eliminar.php');
+}
+
 //pagina
 if (!isset($_REQUEST['page'])) { 
     $pagina=1;

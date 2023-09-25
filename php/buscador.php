@@ -14,7 +14,7 @@ if (in_array($modulo_buscador,$modulos)) {
         "producto"=>"product_search"
     ];
     // = al resultado del indice del arreglo
-    $modulos_url=$modulos_url[$modulo_buscador];
+    $modulos_url=$modulos_url[$modulo_buscador]; 
 
     //lo reescribimos con el valor que trae modulo buscador el cual nos retorna una vista segun el indice
     $modulo_buscador="busqueda_$modulo_buscador";

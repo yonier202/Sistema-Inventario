@@ -52,13 +52,6 @@ if ($total>=1 && $pagina<=$Npaginas) {
     $pag_inicio=$inicio+1;
     foreach ($datos as $registro) {
     $tabla.='
-    <div class="container is-fluid mb-6">
-        <h1 class="title">Productos</h1>
-        <h2 class="subtitle">Lista de productos</h2>
-    </div>
-
-    <div class="container pb-6 pt-6">
-
 
     <article class="media">
         <figure class="media-left">
