@@ -6,6 +6,7 @@
 <div class="container pb-6 pt-6">
 
 <?php
+    include_once('./inc/btn_back.php');
     require_once ('./php/main.php');
 ?>
     <div class="columns">
@@ -64,8 +65,8 @@
 
 
             $pagina=limpiar_cadena($pagina);
-            $url="index.php?vista=product_list&&category_id'.$categoria_id.'&page=";
-            $registros=15;
+            $url="index.php?vista=product_category&category_id='.$categoria_id.'&page=";
+            $registros=1;
             $busqueda="";
 
             require_once('./php/producto_listar.php');
