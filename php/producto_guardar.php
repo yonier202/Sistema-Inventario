@@ -211,4 +211,6 @@ if ($guardar_producto->rowCount()==1) {
 $guardar_producto=null;
 
 
+
+
 ?>

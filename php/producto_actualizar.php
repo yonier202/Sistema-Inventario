@@ -120,10 +120,9 @@ $marcadores=[
     ":id" => $id
 ];
 //ejecutamos pasando los marcadores de las varibles de los datos a guardar
-$actializar_producto->execute($marcadores);
 
 //verificar si se registro el dato
-if ($actializar_producto->rowCount()==1) {
+if ($actializar_producto->execute($marcadores)) {
     echo '
     <div class="notification is-info is-light">
         <strong>¡PRODUCTO ACTUALIZADO!</strong><br>
