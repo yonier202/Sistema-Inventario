@@ -107,7 +107,33 @@ $marcadores=[
 ":producto_id" => $product_id
 ];
 
+if ($update_foto->execute($marcadores)) {
+    echo '
+    <div class="notification is-info is-light">
+        <strong>¡IMAGEN PRODUCTO ACTUALIZADO!</strong><br>
+        El producto se actualizo con exito
 
+        <p class="has-text-centered pt-5 pb-5">
+            <a href="index.php?vista=product_img&product_id_up='.$product_id.'" class="button is-link is-rounded">ACEPTAR</a>
+        </p>
+        
+    </div>';
+}else{
+    echo '
+    <div class="notification is-danger is-light">
+        <strong>¡Ocurrio un error inesperado!</strong><br>
+        No se pudo actualizarla imagen del producto, por favor intente más tarde
+
+        <p class="has-text-centered pt-5 pb-5">
+            <a href="index.php?vista=product_img&product_id_up='.$product_id.'" class="button is-link is-rounded">ACEPTAR</a>
+        </p>
+    </div>';
+}
+$update_foto=null;
+
+
+
+?>
 
 
 
