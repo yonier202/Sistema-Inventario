@@ -101,13 +101,11 @@ if (is_file($img_dir.$datos['foto']) && $datos['foto']!=$foto) {
 
 $update_foto=conexion();
 $update_foto=$update_foto->prepare("UPDATE producto SET foto=:foto WHERE producto_id=:producto_id");
+//
+$update_foto->bindParam(':foto', $foto);
+$update_foto->bindParam(':producto_id', $product_id);
 
-$marcadores=[
-":foto" => $foto,
-":producto_id" => $product_id
-];
-
-if ($update_foto->execute($marcadores)) {
+if ($update_foto->execute()) {
     echo '
     <div class="notification is-info is-light">
         <strong>¡IMAGEN PRODUCTO ACTUALIZADO!</strong><br>
